@@ -50,7 +50,7 @@ const RNFlipCardComponent = () => {
             flipCard.current.flip();
           }}>
           <Text style={{ textAlign: "center", color: "#fff", fontSize: 18 }}>
-            52 weeks
+            365 Days
           </Text>
           {/* <Text
             style={{

@@ -36,7 +36,11 @@ const mainHomeScreen = ({ navigation }) => {
           <Ionicons name='ios-text' size={45} color='white' />
           <Text style={{ fontSize: 20, color: "white" }}>Text</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.singleComponentView}>
+        <TouchableOpacity
+          style={styles.singleComponentView}
+          onPress={() => {
+            navigation.navigate("ComponentWebView", { screen: "iconScreenCode" });
+          }}>
           {/* Icons */}
           <FontAwesome5 name='icons' size={40} color='white' />
           <Text style={{ fontSize: 20, color: "white" }}>Icons</Text>
@@ -86,7 +90,7 @@ const mainHomeScreen = ({ navigation }) => {
       </View>
       <View style={styles.threeContainerView}>
         <TouchableOpacity
-          style={styles.singleComponentView}
+          style={styles.singleComponentViewEx}
           onPress={() => {
             navigation.navigate("Spinner");
           }}>
@@ -94,17 +98,9 @@ const mainHomeScreen = ({ navigation }) => {
           <FontAwesome5 name='spinner' size={45} color='white' />
           <Text style={{ fontSize: 20, color: "white" }}>Spinner</Text>
         </TouchableOpacity>
+        
         <TouchableOpacity
-          style={styles.singleComponentView}
-          onPress={() => {
-            navigation.navigate("Radio");
-          }}>
-          {/* radioButton */}
-          <Ionicons name='radio-button-on-sharp' size={45} color='white' />
-          <Text style={{ fontSize: 16, color: "white" }}>Radio Button</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.singleComponentView}
+          style={styles.singleComponentViewEx}
           onPress={() => {
             navigation.navigate("Dropdown");
           }}>
@@ -115,31 +111,22 @@ const mainHomeScreen = ({ navigation }) => {
       </View>
       <View style={styles.threeContainerView}>
         <TouchableOpacity
-          style={styles.singleComponentView}
+          style={styles.singleComponentViewEx}
           onPress={() => {
             navigation.navigate("DatePicker");
           }}>
           {/* DatePicker */}
           <AntDesign name='calendar' size={45} color='white' />
-          <Text style={{ fontSize: 16, color: "white" }}>Date Picker</Text>
+          <Text style={{ fontSize: 20, color: "white" }}>Date Picker</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={styles.singleComponentView}
+          style={styles.singleComponentViewEx}
           onPress={() => {
             navigation.navigate("Modal");
           }}>
           {/* Modal */}
           <Entypo name='notification' size={45} color='white' />
           <Text style={{ fontSize: 20, color: "white" }}>Modal</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.singleComponentView}
-          onPress={() => {
-            navigation.navigate("Toast");
-          }}>
-          {/* Toast */}
-          <AntDesign name='message1' size={45} color='white' />
-          <Text style={{ fontSize: 20, color: "white" }}>Toast</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.threeContainerView}>
@@ -234,4 +221,16 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
   },
+  singleComponentViewEx : {
+    backgroundColor: "#0D0D0D",
+    paddingTop: 15,
+    marginHorizontal: 10,
+    marginVertical: 10,
+    borderRadius: 10,
+    width: 0.44 * Dimensions.get("window").width,
+    height: 0.15 * Dimensions.get("window").height,
+    alignItems: "center",
+    alignContent: "center",
+    alignSelf: "center",
+  }
 });

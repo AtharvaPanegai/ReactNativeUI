@@ -257,6 +257,18 @@ const BottomTabCode = () => {
         )
 
     }
+    const AudbyteSplashCode =() => {
+        return(
+            <WebView source = {{uri : "https://gist.github.com/Shardul2801/fa8bcd0e2328c0ff61263f41c3858c68"}} />
+        )
+
+    }
+    const iconScreenCode =() => {
+        return(
+            <WebView source = {{uri : "https://icons.expo.fyi/"}} />
+        )
+
+    }
 
 
 const ComponentStack = () => {
@@ -266,6 +278,9 @@ const ComponentStack = () => {
             <Stack.Screen name="MoreLessCode" component = {MoreLessCode} />
             <Stack.Screen name="SelectableTextCode" component = {SelectableTextCode} />
             <Stack.Screen name="TextStyleCode" component = {TextStyleCode} />
+            {/* Icons */}
+            <Stack.Screen name = "iconScreenCode" component = {iconScreenCode} />
+
             {/* Inputs */}
             <Stack.Screen name = "InputWithMaxLengthCode" component = {InputWithMaxLengthCode} />
             <Stack.Screen name =  "MultiLineInputCode" component = {MultiLineInputCode} />
@@ -318,6 +333,7 @@ const ComponentStack = () => {
             <Stack.Screen name = "PrescribedRegCode" component = {PrescribedRegCode} /> 
             <Stack.Screen name = "PrescribedLogCode" component = {PrescribedLogCode} /> 
             <Stack.Screen name = "SignalLogCode" component = {SignalLogCode} /> 
+            <Stack.Screen name = "AudbyteSplashCode" component = {AudbyteSplashCode} /> 
 
         </Stack.Navigator>
     )

@@ -19,7 +19,7 @@ const ToastScreen = ([navigation]) => {
             fontWeight: "100",
             paddingVertical: 15,
           }}>
-          DropDown
+       
         </Card.Title>
 
         <View

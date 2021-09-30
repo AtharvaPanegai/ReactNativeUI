@@ -15,7 +15,7 @@ const ConfettiAnimationComponent = () => {
         <View style={{display: 'flex', flexDirection:'column', width: '100%' }}>
             <Text style={{ fontSize:20, marginVertical: 6, fontWeight: '400'}}>
 
-                What is the FullForm Of GP?
+                What is 1+1?
 
             </Text>
 
@@ -28,14 +28,14 @@ const ConfettiAnimationComponent = () => {
                     borderRadius: 4,
                     marginTop: 10, 
                 }}
-                placeholder = {"Hint: Atharva's Shivi "}
+                placeholder = {"Hint: Addition "}
                 onChangeText={(text) => setConfettiAnswer(text)}
                 />
                 <TouchableOpacity
                         style={styles.submitButton}
                     onPress={() =>{
                         if
-                        (confettiAnswer.trim().toLowerCase()==='ganditpay') {
+                        (confettiAnswer.trim().toLowerCase()==='2') {
                             confettiRef.current.start();
 
                         }else {

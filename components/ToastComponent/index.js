@@ -2,9 +2,18 @@ import React from 'react'
 import { StyleSheet, Text, View,ToastAndroid,TouchableOpacity } from 'react-native'
 
 const ToastComponent = () => {
+
+    const showToastWithGravity = () => {
+        ToastAndroid.showWithGravity(
+          "All Your Base Are Belong To Us",
+          ToastAndroid.SHORT,
+          ToastAndroid.CENTER
+        );
+      };
+
     return (
         <View style = {styles.container}>
-            <TouchableOpacity style = {styles.buttonOpacity} onPress = {()=>{ToastAndroid.show("This is Toast",2000);}}>
+            <TouchableOpacity style = {styles.buttonOpacity} onPress={() => showToastWithGravity()}>
                 <Text style = {styles.buttonText}>Show Toast</Text>
             </TouchableOpacity>
         </View>

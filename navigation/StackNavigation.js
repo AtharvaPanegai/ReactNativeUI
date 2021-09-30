@@ -24,15 +24,16 @@ import DatePickerScreen from "../screens/DatePickerScreen";
 import ModalScreen from "../screens/ModalScreen";
 import ToastScreen from "../screens/ToastScreen";
 import CardScreen from "../screens/CardScreen";
+import UIScreenShower from "../screens/UIScreen/UIScreenShower";
 import ComponentStack from "./ComponentStack";
 import DropdownComponent from "../components/DropdownComponent";
-import UIScreenShower from "../screens/UIScreen/UIScreenShower";
 import instaClone from "../screens/UIScreen/instaClone";
 import ProductListScreen1 from "../screens/UIScreen/ProductListScreen1";
 import RegisterScreen from "../screens/UIScreen/PrescribedRegisterScreen";
 import LoginScreen from "../screens/UIScreen/PrescribedLoginScreen";
 import SignalregisterScreen from "../screens/UIScreen/SignalRegisterScreen";
 import Signalloginscreen from "../screens/UIScreen/SignalLoginScreen";
+import SplashScreen from "../screens/UIScreen/AudbyteSplashScreen";
 const Stack = createStackNavigator();
 
 const StackNavigation = ({ navigation }) => {
@@ -46,6 +47,7 @@ const StackNavigation = ({ navigation }) => {
       <Stack.Screen
         options={{
           headerShown: true,
+          headerTitle : "React Native UI",
           headerTintColor: "white",
           headerStyle: { backgroundColor: "#242B2E" },
         }}
@@ -57,7 +59,7 @@ const StackNavigation = ({ navigation }) => {
       <Stack.Screen name='BottomTabNav' component={BottomTabNav} />
       <Stack.Screen name='DrawerNavigation' component={DrawerNavigation} />
       <Stack.Screen name='TopTabNavigation' component={TopTabNavigation} />
-      <Stack.Screen name='UI' component={UILibPartScreen} />
+      <Stack.Screen options={{headerTitle : "UI Library Components"}} name='UI' component={UILibPartScreen} />
       <Stack.Screen name='Switch' component={SwitchScreen} />
       <Stack.Screen name='Input' component={InputPartScreen} />
       <Stack.Screen name='CheckBox' component={CheckBoxScreen} />
@@ -74,6 +76,7 @@ const StackNavigation = ({ navigation }) => {
       <Stack.Screen options = {{headerShown : false}} name='prescribedReg' component={RegisterScreen}/>
       <Stack.Screen options = {{headerShown : false}} name='SignalLog' component={Signalloginscreen}/>
       <Stack.Screen options = {{headerShown : false}} name='SignalReg' component={SignalregisterScreen}/>
+      <Stack.Screen options = {{headerShown : false}} name='AudbyteSplashScreen' component={SplashScreen}/>
       {/* component Stack */}
       <Stack.Screen
         options={{ headerShown: false }}
@@ -81,6 +84,9 @@ const StackNavigation = ({ navigation }) => {
         component={ComponentStack}
       />
       <Stack.Screen
+      options={{
+        headerTitle : "UI Screens"
+      }} 
         name='UIScreenShower'
         component={UIScreenShower}
       />
