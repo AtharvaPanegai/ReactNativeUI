@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "ReactNativeUIComponents",
-    "slug": "ReactNativeUIComponents",
+    "name": "React Native UI",
+    "slug": "React Native UI",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -17,9 +17,12 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.agnitechnologies.ReactNativeUI",
+      "buildNumber": "1.0.0"
     },
     "android": {
+      "package" : "com.agnitechnologies.ReactNativeUI",
+      "versionCode" : 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
