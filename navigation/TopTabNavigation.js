@@ -5,13 +5,13 @@ import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 
-function ScreenA() {
+function ScreenA({navigation}) {
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <Text>Screen A</Text>
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate("ComponentWebView", { screen: "DrawerCode" });
+          navigation.navigate("ComponentWebView", { screen: "TopTabCode" });
         }}
         style={{
           backgroundColor: "#242B2E",

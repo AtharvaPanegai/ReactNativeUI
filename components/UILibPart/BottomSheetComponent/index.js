@@ -41,7 +41,7 @@ export default function BottomSheetComponent() {
             style={[styles.iconButton, { marginTop: 20 }]}
             onPress={() => {
               Linking.openURL(
-                'https://play.google.com/store/apps/developer?id=Akul+Srivastava'
+                '#'
               );
             }}
           >
